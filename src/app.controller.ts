@@ -5,8 +5,8 @@ import { AuthGuard } from '@nestjs/passport';
 @Controller()
 export class AppController {
   constructor(private readonly appService: AppService) {}
-@UseGuards(AuthGuard("jwt"))
-  @Get()
+// @UseGuards(AuthGuard("jwt"))
+  @Get("No-Jwt-Url")
   getHello(): string {
     return this.appService.getHello();
   }
